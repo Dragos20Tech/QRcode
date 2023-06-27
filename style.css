@@ -28,18 +28,18 @@ h1,p{
 
 h1{
     padding-top: 3.5rem;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     color: hsl(218, 44%, 22%);
 }
 
 p{
     /* 1.5 * 10px = 15px */
     font-size: 1.5rem;
-    padding-top: 2.5rem;
+    padding-top: 2rem;
     color: hsl(220, 15%, 55%)
 }
 
-.container{
+main{
     width: 100%;
     height: 100vh;
     display: grid;
@@ -51,11 +51,14 @@ p{
      it's needed. To be specific, at 365-380 width px it changes from
      30rem to 80% which is really cool. Practically chooses the minimum
      value out of the 2 depending of the width. */
-    width: min(30rem,80%);
+    width: min(31rem,80%);
     margin: auto;
-    height: 47rem;
+    height: 49rem;
     background: white;
     border-radius: 1.5rem;
+    box-shadow: 0 1rem 1rem 0.2rem lightslategray;
+    /* box-shadow : offset-x | offset-y | blur-radius | spread-radius | color */
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
 }
 
 #image {
@@ -66,23 +69,57 @@ p{
     transform: translateY(5%);
 }
 
-@media screen and (max-width: 360px){
+
+@media screen and (max-height: 500px){
     .wrapper{
-        height: min(43rem,77.5%);
+        scale: 0.75 0.75;
     }
-}
-
-
-@media screen and (max-width: 150px){
     h1{
-        font-size: calc(1.8rem - 0.3rem);
+        font-size: clamp(2.1rem,calc(2.5vw + 2.5vh - 1.8rem),2.25rem);
     }
     p{
-        font-size: calc(1.5rem - 0.1rem);
+        font-size: clamp(1.6rem,calc(1.9vw + 1.9vh - 1.5rem),1.65rem);
     }
 }
 
-@media screen and (max-width: 110px){
+@media screen and (max-width: 375px){
+    .wrapper{
+        height: min(48rem,98.5%);
+    }
+    h1,p{;
+        max-width: 90.5%;
+    }
+}
+
+
+@media screen and (max-width: 190px){
+    .wrapper{
+        height: min(43rem,98.5%);
+    }
+    h1{
+        font-size: calc(1.8rem - 0.05rem);
+    }
+    p{
+        font-size: calc(1.5rem - 0.075rem);
+    }
+}
+
+@media screen and (max-width: 130px){
+    .wrapper{
+        height: min(40rem,98.5%);
+    }
+    h1{
+        font-size: calc(1.8rem - 0.45vh);
+    }
+    p{
+        font-size: calc(1.5rem - 0.35vh);
+    }
+}
+
+@media screen and (max-width: 90px){
+    .wrapper{
+        height: min(40rem,92.5%);
+    }
     h1{
         font-size: calc(1.8rem - 0.7vh);
     }
@@ -91,13 +128,14 @@ p{
     }
 }
 
-@media screen and (max-width: 80px){
+@media screen and (max-width: 60px){
+    .wrapper{
+        height: min(28rem,92.5%);
+    }
     h1{
-        font-size: calc(1.8rem - 1vh);
+        font-size: calc(1.8rem - 0.97vh);
     }
     p{
-        font-size: calc(1.5rem - 1vh);
+        font-size: calc(1.5rem - 0.97vh);
     }
 }
-
-

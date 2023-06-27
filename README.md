@@ -1,3 +1,3 @@
-# QR Code Mark I (component)
+# QR Code Mark II (component)
 
 Demo : https://dragos20tech.github.io/QRcode/
