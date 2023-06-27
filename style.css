@@ -35,7 +35,7 @@ h1{
 p{
     /* 1.5 * 10px = 15px */
     font-size: 1.5rem;
-    padding-top: 2.5rem;
+    padding-top: 2rem;
     color: hsl(220, 15%, 55%)
 }
 
@@ -51,12 +51,14 @@ main{
      it's needed. To be specific, at 365-380 width px it changes from
      30rem to 80% which is really cool. Practically chooses the minimum
      value out of the 2 depending of the width. */
-    width: min(30rem,80%);
+    width: min(31rem,80%);
     margin: auto;
-    height: 48rem;
+    height: 49rem;
     background: white;
     border-radius: 1.5rem;
-    box-shadow: 0 0.5rem 1rem lightslategray;
+    box-shadow: 0 1rem 1rem 0.2rem lightslategray;
+    /* box-shadow : offset-x | offset-y | blur-radius | spread-radius | color */
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
 }
 
 #image {
