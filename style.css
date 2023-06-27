@@ -69,11 +69,6 @@ main{
     transform: translateY(5%);
 }
 
-@media screen and (max-height: 450px){
-    .wrapper{
-
-    }
-}
 
 @media screen and (max-height: 500px){
     .wrapper{
